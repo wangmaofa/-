@@ -1,7 +1,4 @@
 #  MAML-Pytorch
-PyTorch implementation of the supervised learning experiments from the paper:
-[Model-Agnostic Meta-Learning (MAML)](https://arxiv.org/abs/1703.03400).
-
 > Version 1.0: Both `MiniImagenet` and `Omniglot` Datasets are supported! Have Fun~
 
 > Version 2.0: Re-write meta learner and basic learner. Solved some serious bugs in version 1.0.
@@ -55,17 +52,6 @@ to your actual data path.
 If your reproducation perf. is not so good, maybe you can enlarge your `training epoch` to get longer training. And MAML is notorious for its hard training. Therefore, this implementation only provide you a basic start point to begin your research.
 and the performance below is true and achieved on my machine.
 
-## Benchmark
-
-| Model                               | Fine Tune | 5-way Acc. |        | 20-way Acc.|        |
-|-------------------------------------|-----------|------------|--------|------------|--------|
-|                                     |           | 1-shot     | 5-shot | 1-shot     | 5-shot |
-| Matching Nets                       | N         | 43.56%     | 55.31% | 17.31%     | 22.69% |
-| Meta-LSTM                           |           | 43.44%     | 60.60% | 16.70%     | 26.06% |
-| MAML                                | Y         | 48.7%      | 63.11% | 16.49%     | 19.29% |
-| **Ours**                            | Y         | 46.2%      | 60.3%	| -    		 | - 	|
-
-
 
 # Ominiglot
 
@@ -75,17 +61,3 @@ run `python omniglot_train.py`, the program will download `omniglot` dataset aut
 decrease the value of `args.task_num` to fit your GPU memory capacity.
 
 For 5-way 1-shot exp., it allocates nearly 3GB GPU memory.
-
-
-# Refer to this Rep.
-```
-@misc{MAML_Pytorch,
-  author = {Liangqu Long},
-  title = {MAML-Pytorch Implementation},
-  year = {2018},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/dragen1860/MAML-Pytorch}},
-  commit = {master}
-}
-```
